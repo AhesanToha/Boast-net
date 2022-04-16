@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Download upto 1Gbps",
+    "price": 300,
+    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
+    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-download.png"
+  },
+  {
+    "id": 2,
+    "name": "99% Intenet Uptime",
+    "price": 100,
+    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
+    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-uptime.png"
+  },
+  {
+    "id": 3,
+    "name": "24/7 Customer Support",
+    "price": 150,
+    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
+    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-support.png"
+  }
+]

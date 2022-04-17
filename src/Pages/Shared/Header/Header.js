@@ -3,11 +3,19 @@ import CustomLink from "../CustomLink/CustomLink";
 import "./Header.css";
 import brandLogo from "../../../images/brandlogo.png";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <header>
-      <nav  className="header container">
+      <nav className="header container">
         <div>
           <Link to={"/"}>
             <img height={40} src={brandLogo} alt="" />
@@ -18,7 +26,11 @@ const Header = () => {
           <CustomLink to="/home">HOME</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
           <CustomLink to="/about">ABOUT</CustomLink>
-          <Link to="/login">LOGIN</Link>
+          {user ? (
+            <Link to={'/'} onClick={handleSignOut}>Sign Out</Link>
+          ) : (
+            <Link to="/login">LOGIN</Link>
+          )}
         </div>
       </nav>
     </header>

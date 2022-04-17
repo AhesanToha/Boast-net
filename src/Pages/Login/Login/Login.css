@@ -2,14 +2,14 @@
   width: 450px;
   text-align: center;
   margin: 20px auto;
-  box-shadow: 0 5px 15px rgba(164, 199, 231, 0.829);
+  box-shadow: 0 3px 8px rgba(164, 199, 231, 0.829);
   border-radius: 10px;
 }
 
-.login-container:hover {
-  box-shadow: 0 10px 30px rgba(164, 199, 231, 0.829);
+/* .login-container:hover {
+  box-shadow: 0 5px 15px rgba(164, 199, 231, 0.829);
   transition: box-shadow 0.2s ease-in-out;
-}
+} */
 
 .login-container input {
   width: 90%;

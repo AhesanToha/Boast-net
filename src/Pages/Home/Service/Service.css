@@ -5,7 +5,7 @@
 }
 
 .service:hover {
-  box-shadow: 0 10px 30px rgba(164, 199, 231, 0.829);
+  box-shadow: 0 5px 15px rgba(164, 199, 231, 0.829);
   transition: box-shadow 0.2s ease-in-out;
   
 

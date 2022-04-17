@@ -9,8 +9,9 @@ function CustomLink({ children, to, ...props }) {
     <div>
       <Link
         style={{
-          paddingBottom: "10px",
+          paddingBottom: "5px",
           borderBottom: match ? "3px solid cyan" : "3px solid #746f6f",
+          color: match? 'cyan' :' rgb(185, 236, 236)'
         }}
         to={to}
         {...props}

@@ -1,0 +1,46 @@
+.checkout-container {
+  width: 450px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(164, 199, 231, 0.829);
+  border-radius: 10px;
+}
+
+.checkout-container:hover {
+  box-shadow: 0 10px 30px rgba(164, 199, 231, 0.829);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.checkout-container input {
+  padding: 10px 10px;
+  margin: 5px;
+  font-size: 20px;
+  border: 2px solid cyan;
+  background: none;
+  border-radius: 7px;
+  color: #48dbfb;
+}
+
+.checkout-info input {
+  width: 85%;
+}
+
+.checkout-name {
+  width: 100%;
+}
+.checkout-name input {
+  width: 42%;
+}
+
+
+
+
+@media only screen and (max-width: 576px) {
+  .checkout-container {
+    width: 80%;
+    margin-bottom: 100px;
+  }
+  .checkout-container input {
+    width: 80%;
+  }
+}

@@ -1,0 +1,30 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: #222f3e;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  margin-right: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.nav-menu a:hover {
+  color: aqua;
+}
+
+

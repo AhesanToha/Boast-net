@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  background-color: #222f3e;
+  color: #48dbfb;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 50px;
+}

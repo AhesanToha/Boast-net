@@ -5,9 +5,9 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div className="p-4 text-white footer">
+    <footer className="p-4 text-white footer">
       <p>Copyright &copy;{year} Boast Net</p>
-    </div>
+    </footer>
   );
 };
 

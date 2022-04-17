@@ -1,9 +1,27 @@
 .service {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: #48dbfb;
 }
 
 .service:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   box-shadow: 0 10px 30px rgba(164, 199, 231, 0.829);
+  transition: box-shadow 0.2s ease-in-out;
+  
+
+}
+
+.service button {
+  border: none;
+  font-weight: 600;
+  background-color: rgb(137, 182, 221);
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service button:hover{
+    box-shadow: 0 3px 10px rgba(164, 199, 231, 0.829);
+    transition: box-shadow 0.2s ease-in-out;
+    border-bottom: 3px solid cyan;
 }

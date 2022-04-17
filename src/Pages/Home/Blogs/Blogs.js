@@ -1,13 +1,13 @@
-import React from 'react';
-import Loading from '../../Shared/Loading/Loading';
-
+import React from "react";
+import "./Blogs.css";
 const Blogs = () => {
-    return (
-        <div>
-            this is Blogs
-            <Loading></Loading>
-        </div>
-    );
+
+    
+  return <div>
+
+
+
+  </div>;
 };
 
 export default Blogs;

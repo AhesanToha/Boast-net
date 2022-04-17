@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import Social from "../Social/Social";
 import "./Login.css";
 
 const Login = () => {
@@ -67,6 +68,7 @@ const Login = () => {
       <p className="text-center" style={{ color: "red" }}>
         {error?.message}
       </p>
+      <Social></Social>
     </div>
   );
 };

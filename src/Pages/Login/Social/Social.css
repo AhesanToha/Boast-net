@@ -1,0 +1,26 @@
+.divided-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divided-border p {
+  padding: 0 10px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.social-links button {
+    width: 80%;
+  font-weight: 600;
+  color: cyan;
+  background: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.divided-border div {
+  height: 1px;
+  width: 40%;
+  border: 1px solid cyan;
+}

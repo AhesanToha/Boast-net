@@ -3,7 +3,6 @@ import "./Checkout.css";
 import toast, { Toaster } from "react-hot-toast";
 
 const Checkout = () => {
-
   const handleToast = () => {
     toast.success("Your order has been placed", {
       style: {
@@ -19,7 +18,7 @@ const Checkout = () => {
   return (
     <div className="checkout-container">
       <h2>Checkout</h2>
-      <form>
+      <form onSubmit={handleToast}>
         <div className="checkout-name">
           <input
             type="text"
@@ -56,13 +55,7 @@ const Checkout = () => {
           <br />
           <input type="text" name="phone" id="" placeholder="Phone" required />
           <br />
-          <input
-            onClick={() => {
-              handleToast();
-            }}
-            type="button"
-            value="Proceed"
-          />
+          <input type="submit" value="Proceed" />
           <Toaster position="top-right" reverseOrder={false} />
         </div>
       </form>

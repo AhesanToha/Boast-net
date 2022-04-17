@@ -1,18 +1,39 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Service.css";
+import { CheckCircleIcon } from "@heroicons/react/solid";
 
 const Service = ({ service }) => {
-  const {  name, description, price, img } = service;
+  const { name, price, img, d1, d2, d3, d4 } = service;
   const navigate = useNavigate();
   return (
     <div className="text-center mb-4 service">
       <img src={img} alt="" />
-      <h4>{name}</h4>
-      <h6>Price: $ {price}</h6>
-      <p>{description}</p>
-      <button onClick={() => navigate('/checkout')} className="mb-4">
-        Book: {name}
+      <h2>{name}</h2>
+      <div className="price">
+        <h3 style={{ color: "gold" }}>Price: $ {price}</h3>
+        <p>/month</p>
+      </div>
+      <div className="des">
+        <p>
+          <CheckCircleIcon height={20} />
+          {d1}
+        </p>
+        <p>
+          <CheckCircleIcon height={20} />
+          {d2}
+        </p>
+        <p>
+          <CheckCircleIcon height={20} />
+          {d3}
+        </p>
+        <p>
+          <CheckCircleIcon height={20} />
+          {d4}
+        </p>
+      </div>
+      <button onClick={() => navigate("/checkout")} className="mb-4 w-50">
+        Purchase 
       </button>
     </div>
   );

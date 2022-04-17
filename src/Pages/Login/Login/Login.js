@@ -1,12 +1,14 @@
 import React, { useRef, useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import "./Login.css";
 
 const Login = () => {
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const [signInWithEmailAndPassword, user, loading, error] =
@@ -26,7 +28,7 @@ const Login = () => {
   }
 
   if (user) {
-    navigate("/home");
+    navigate(from, { replace: true });
   }
   return (
     <div className="login-container">
@@ -62,7 +64,9 @@ const Login = () => {
           Please Register
         </Link>
       </p>
-      <p className="text-center" style={{color:'red'}}>{error?.message}</p>
+      <p className="text-center" style={{ color: "red" }}>
+        {error?.message}
+      </p>
     </div>
   );
 };

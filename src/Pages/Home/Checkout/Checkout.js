@@ -3,8 +3,9 @@ import "./Checkout.css";
 import toast, { Toaster } from "react-hot-toast";
 
 const Checkout = () => {
+
   const handleToast = () => {
-    toast.success("Successfully toasted!", {
+    toast.success("Your order has been placed", {
       style: {
         borderRadius: "10px",
         background: "#333",
@@ -20,16 +21,40 @@ const Checkout = () => {
       <h2>Checkout</h2>
       <form>
         <div className="checkout-name">
-          <input type="text" name="fName" id="" placeholder="First Name" />
-          <input type="text" name="lName" id="" placeholder="Last Name" />
+          <input
+            type="text"
+            name="fName"
+            id=""
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            name="lName"
+            id=""
+            placeholder="Last Name"
+            required
+          />
           <br />
         </div>
         <div className="checkout-info">
-          <input type="email" name="email" id=" " placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            id=" "
+            placeholder="Email"
+            required
+          />
           <br />
-          <input type="text" name="address" id="" placeholder="Address" />
+          <input
+            type="text"
+            name="address"
+            id=""
+            placeholder="Address"
+            required
+          />
           <br />
-          <input type="text" name="phone" id="" placeholder="Phone" />
+          <input type="text" name="phone" id="" placeholder="Phone" required />
           <br />
           <input
             onClick={() => {

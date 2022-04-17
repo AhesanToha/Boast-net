@@ -3,6 +3,16 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   color: #48dbfb;
 }
+.des{
+  text-align: start;
+  display: grid;
+  justify-content: space-around;
+}
+.price{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
 
 .service:hover {
   box-shadow: 0 5px 15px rgba(164, 199, 231, 0.829);

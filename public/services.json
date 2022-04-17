@@ -1,23 +1,32 @@
 [
   {
     "id": 1,
-    "name": "Download upto 1Gbps",
-    "price": 300,
-    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
-    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-download.png"
+    "name": "Internet",
+    "price": 24.99,
+    "d1": "PHome Broadband",
+    "d2": "Cell Phone Connection",
+    "d3": "99% Internet Uptime",
+    "d4": "Made for 1-3 Devices",
+    "img": "https://i.ibb.co/grDtF5x/image.png"
   },
   {
     "id": 2,
-    "name": "99% Intenet Uptime",
-    "price": 100,
-    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
-    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-uptime.png"
+    "name": "Internet + TV",
+    "price": 40.99,
+    "d1": "PHome Broadband",
+    "d2": "150+ Channels TV",
+    "d3": "Cell Phone Connection",
+    "d4": "Made for 1-4 Devices",
+    "img": "https://i.ibb.co/fS3PBjv/image-2.png"
   },
   {
     "id": 3,
-    "name": "24/7 Customer Support",
-    "price": 150,
-    "description": "Praesent tincidunt porttitor libero, id sodales enim tincidunt. Proin dignissim leo finibus risus.",
-    "img": "https://www.aivahthemes.com/wp/ultranet/wp-content/uploads/sites/16/2018/12/icon-support.png"
+    "name": "Internet + TV",
+    "price": 40.99 ,
+    "d1": "PHome Broadband",
+    "d2": "200+ Channels TV",
+    "d3": "Cell Phone Connection",
+    "d4": "Made for 1-8 Devices",
+    "img": "https://i.ibb.co/MGYs07d/image-3.png"
   }
 ]

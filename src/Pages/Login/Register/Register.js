@@ -22,7 +22,6 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     createUserWithEmailAndPassword(email, password);
-    toast("UserRegistered");
   };
 
   if (user) {
@@ -61,8 +60,12 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <p style={{ color: "red" }}>{error?.message}</p>
       </form>
-      <Toaster></Toaster>
+      <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
     </div>
   );
 };

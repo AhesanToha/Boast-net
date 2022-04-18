@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 const Checkout = () => {
 
   const handleToast = () => {
-    toast.success("Your order has been placed", {
+    toast.success("thank you for the booking.", {
       style: {
         borderRadius: "10px",
         background: "#333",

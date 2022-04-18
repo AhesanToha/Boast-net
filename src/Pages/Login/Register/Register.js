@@ -7,7 +7,9 @@ import Loading from "../../Shared/Loading/Loading";
 import Social from "../Social/Social";
 import "./Register.css";
 
-const Register =  () => {
+const Register = () => {
+
+
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");

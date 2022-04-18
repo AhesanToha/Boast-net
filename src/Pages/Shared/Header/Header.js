@@ -25,9 +25,9 @@ const Header = () => {
         <div className="nav-link">
           <CustomLink to="/home">HOME</CustomLink>
           <CustomLink to="/blogs">BLOGS</CustomLink>
-          <CustomLink to="/about">ABOUT</CustomLink>
+          <CustomLink to="/about">ABOUT ME</CustomLink>
           {user ? (
-            <Link to={'/'} onClick={handleSignOut}>Sign Out</Link>
+            <Link to={'/'} onClick={handleSignOut} className='signout'>SIGN OUT</Link>
           ) : (
             <Link to="/login">LOGIN</Link>
           )}

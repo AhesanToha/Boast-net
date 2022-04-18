@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
@@ -10,6 +10,8 @@ import "./Register.css";
 const Register = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
+  const confirmPasswordRef = useRef('')
+  const [error1, setError] = useState('')
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -22,7 +24,14 @@ const Register = () => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    createUserWithEmailAndPassword(email, password);
+    const confirmPassword = confirmPasswordRef.current.value;
+    if(password === confirmPassword){
+      createUserWithEmailAndPassword(email, password);
+
+    }
+    else(
+       setError("Password didn't match")
+    )
   };
 
   if (user) {
@@ -52,8 +61,19 @@ const Register = () => {
             required
           />
           <br />
+          
+          <input
+            type="password"
+            name="confirmPassword"
+            id=""
+            ref={confirmPasswordRef}
+            placeholder="Confirm Password"
+            required
+          />
+          <br />
           <input type="submit" value="register" />
           <br />
+
         </div>
         <p>
           Already have an account?{" "}
@@ -62,6 +82,7 @@ const Register = () => {
           </Link>
         </p>
         <p style={{ color: "red" }}>{error?.message}</p>
+        <p style={{ color: "red" }}>{error1}</p>
       </form>
       <Toaster position="top-right" reverseOrder={false} />
       <Social></Social>

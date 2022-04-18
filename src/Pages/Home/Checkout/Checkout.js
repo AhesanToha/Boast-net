@@ -3,6 +3,7 @@ import "./Checkout.css";
 import toast, { Toaster } from "react-hot-toast";
 
 const Checkout = () => {
+
   const handleToast = () => {
     toast.success("Your order has been placed", {
       style: {

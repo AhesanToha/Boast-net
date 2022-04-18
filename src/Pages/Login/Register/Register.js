@@ -1,43 +1,36 @@
 import React, { useRef, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import Social from "../Social/Social";
 import "./Register.css";
 
-const Register = () => {
+const Register =  () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const confirmPasswordRef = useRef("");
   const [error1, setError] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+     useCreateUserWithEmailAndPassword(auth, {
+      sendEmailVerification: true,
+    });
   const navigate = useNavigate();
 
   if (loading) {
     return <Loading></Loading>;
   }
 
-  const handleRegister = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
     if (password === confirmPassword) {
-      createUserWithEmailAndPassword(email, password);
+     await createUserWithEmailAndPassword(email, password);
 
-      toast("Email Sent", {
-        style: {
-          borderRadius: "10px",
-          background: "#333",
-          color: " #48dbfb",
-          boxShadow: "0 5px 15px rgba(164, 199, 231, 0.829)",
-          borderBottom: "3px solid cyan",
-          margin: "50px 30px",
-        },
-      });
+    
     } else setError("Password didn't match");
   };
 

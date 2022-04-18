@@ -10,10 +10,10 @@ import "./Register.css";
 const Register = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
-  const confirmPasswordRef = useRef('')
-  const [error1, setError] = useState('')
+  const confirmPasswordRef = useRef("");
+  const [error1, setError] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const navigate = useNavigate();
 
   if (loading) {
@@ -25,13 +25,20 @@ const Register = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     const confirmPassword = confirmPasswordRef.current.value;
-    if(password === confirmPassword){
+    if (password === confirmPassword) {
       createUserWithEmailAndPassword(email, password);
 
-    }
-    else(
-       setError("Password didn't match")
-    )
+      toast("Email Sent", {
+        style: {
+          borderRadius: "10px",
+          background: "#333",
+          color: " #48dbfb",
+          boxShadow: "0 5px 15px rgba(164, 199, 231, 0.829)",
+          borderBottom: "3px solid cyan",
+          margin: "50px 30px",
+        },
+      });
+    } else setError("Password didn't match");
   };
 
   if (user) {
@@ -61,7 +68,7 @@ const Register = () => {
             required
           />
           <br />
-          
+
           <input
             type="password"
             name="confirmPassword"
@@ -73,7 +80,6 @@ const Register = () => {
           <br />
           <input type="submit" value="register" />
           <br />
-
         </div>
         <p>
           Already have an account?{" "}

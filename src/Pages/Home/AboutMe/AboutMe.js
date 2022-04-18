@@ -4,7 +4,7 @@ import profile from "../../../images/profile.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="container single-container">
+    <div className="container about-container">
       <div className="single about">
         <img src={profile} alt="" />
         <h2 className="pb-3">M. Ahesanul Hoque Toha</h2>
